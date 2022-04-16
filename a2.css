@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-image: linear-gradient(#00000055, rgba(0, 0, 0, 0.5)),
+      url("https://media.istockphoto.com/photos/bright-festive-blue-background-with-birthday-party-accessories-picture-id1093222958?k=20&m=1093222958&s=612x612&w=0&h=e__Zwx0jO2heVABabctv9q6ReaOsq3tXWrbmgw0leXA=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #e3c8de;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100%;
+  }
+  h1 {
+    font-size: 3rem;
+    position: relative;
+    height: 300px;
+    background-repeat: repeat;
+    /* min-height: 100vh; */
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .bg-gif {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url("https://media2.giphy.com/media/3ohhwzIw3bISRhQWME/200.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    /* animation: bg-gif 2s ease 2s infinite; */
+    animation: bg-gif 5s ease 2s 1 normal both;
+  }
+  .bg-gif2 {
+    background-image: url("https://i.pinimg.com/originals/86/1c/ca/861cca967d578787751f79a4dffa9599.gif");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    animation: bg-gif 5s ease 6s 2 normal both;
+  }
+  .bg-gif3 {
+    width: 50%;
+    height: 50%;
+    background-image: url("https://i.pinimg.com/originals/49/6c/f5/496cf59cb7144e64c3e2e3efb958c6fa.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    animation: bg-gif 5s ease 10s infinite normal both;
+  }
+  .bg-gif4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(https://hurfat.com/wp-content/uploads/2021/08/Hurfat.com-1-1.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 50;
+    animation: bg-gif4 5s ease 12s 1 alternate both;
+    /* animation: bg-gif 5s ease 8s 2 normal both; */
+  }
+  .bg-gif5 {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(https://thumbs.gfycat.com/FlatGranularBuzzard-max-1mb.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: none;
+    animation: bg-gif4;
+  }
+  h1::after {
+    content: "🎂Ishita💝";
+    font-size: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+  button {
+    padding: 10px 10px 10px 10px;
+    margin-top: 5px;
+    background-color: pink;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  @keyframes bg-gif {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes bg-gif4 {
+    0% {
+      transform: scale(0.8) translate(-50%, -50%);
+      transform-origin: 50% 16%;
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes myAnim {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateX(-500px) scale3d(1, 1, 1);
+    }
+    30% {
+      transform: translate(-50%, -50%) scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: translate(-50%, -50%) scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: translate(-50%, -50%) scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: translate(-50%, -50%) scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: translate(-50%, -50%) scale3d(1, 1, 1);
+      /* position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%); */
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+    .subtitle {
+      display: block;
+      font-size: 1rem;
+    }
+    h1::after {
+       /* content: '🎂ishita💝'; */
+      font-size: 1.5rem;
+    }
+  }
